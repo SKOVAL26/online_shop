@@ -1,21 +1,24 @@
-import React, {createContext} from 'react';
-import ReactDOM from 'react-dom';
+import React, { createContext } from 'react';
+import { createRoot } from 'react-dom'; // Импортируйте ReactDOM из react-dom
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UserStore from './store/UserStore'
-import DeviceStore from "./store/DeviceStore";
-export const Context = createContext(null)
+import UserStore from './store/UserStore';
+import DeviceStore from './store/DeviceStore';
 
+export const Context = createContext(null);
 
-ReactDOM.render(
-    <Context.Provider value = {{
-        user: new UserStore(),
-        device: new DeviceStore(),
-    }}>
-        <App/>
-    </Context.Provider>,
-    document.getElementById('root')
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+    <Context.Provider
+        value={{
+            user: new UserStore(),
+            device: new DeviceStore(),
+        }}
+    >
+        <App />
+    </Context.Provider>
 );
 
 reportWebVitals();
