@@ -20,9 +20,10 @@ const NavBar = observer(() => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <NavLink style={{color:'white'}} to={SHOP_ROUTE}>Украинский Девайс</NavLink>
+                <NavLink style={{color:'yellow'}} to={SHOP_ROUTE}>Украинский Девайс</NavLink>
                 {user.isAuth ?
                     <Nav className="ml-auto" style={{color: 'yellow'}}>
+
                         <Button
                             variant={"outline-light"}
                             onClick={() => history(ADMIN_ROUTE)}

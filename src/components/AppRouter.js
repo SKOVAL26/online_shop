@@ -1,3 +1,4 @@
+//Компонент с логикой навигации по страницам
 import React, {useContext} from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { authRoutes, publicRoutes } from "../routes";
@@ -7,10 +8,10 @@ import {Context} from "../index";
 
 const AppRouter = () => {
     const {user} = useContext(Context)
-console.log(user)
+    console.log(user)
     return (
 
-            <Routes>
+            <Routes> {/*Замена Switch*/}
                 {user.isAuth && authRoutes.map(({ path, Component }) => (
                     <Route key={path} path={path} element={<Component />} />
                 ))}

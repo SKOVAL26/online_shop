@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { createRoot } from 'react-dom'; // Импортируйте ReactDOM из react-dom
+import { createRoot } from 'react-dom'; // Импорт ReactDOM из react-dom
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

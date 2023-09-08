@@ -1,3 +1,4 @@
+//Основная страница
 import React, {useContext, useEffect} from 'react';
 import {Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
@@ -9,6 +10,7 @@ import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 import {fetchBrands, fetchDevices, fetchTypes} from "../http/deviceAPI";
 import Pages from "../components/Pages";
+import Footer from "../components/modals/Footer";
 
 const Shop = observer(() => {
     const {device} = useContext(Context)
@@ -39,8 +41,11 @@ const Shop = observer(() => {
                     <BrandBar/>
                     <DeviceList/>
                     <Pages/>
+
                 </Col>
             </Row>
+            <Footer/>
+
         </Container>
     );
 });

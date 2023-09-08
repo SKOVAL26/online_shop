@@ -20,7 +20,7 @@ const Pages = observer(() => {
                     active={device.page === page}
                     onClick={() => device.setPage(page)}
                 >
-                    {page}
+                   {page}
                 </Pagination.Item>
             )}
         </Pagination>

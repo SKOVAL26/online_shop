@@ -1,3 +1,4 @@
+//Страница с корзиной
 import React from 'react';
 
 const Basket = () => {

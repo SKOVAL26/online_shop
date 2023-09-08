@@ -1,3 +1,4 @@
+//Компонент для отображения типа устройства
 import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
@@ -8,7 +9,7 @@ const TypeBar = observer(() => {
     const {device} = useContext(Context)
     return (
         <ListGroup>
-            {device.types.map(type =>
+            {device.types.map(type => //Перебор всех типов, которые находятся в Store
                 <ListGroup.Item
                     style={{cursor: 'pointer'}}
                     active={type.id === device.selectedType.id}

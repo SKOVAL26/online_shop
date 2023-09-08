@@ -1,3 +1,4 @@
+//Опсанны все маршруты к конкретным страницам
 import Admin from "./pages/Admin";
 import {ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE} from "./utils/consts";
 import Basket from "./pages/Basket";
@@ -5,10 +6,10 @@ import DevicePage from "./pages/DevicePage";
 import Shop from "./pages/Shop";
 import Auth from "./pages/Auth";
 
-export const authRoutes = [
+export const authRoutes = [ //Список маршрутов для автоизованных пользователей
     {
-        path: ADMIN_ROUTE,
-        Component: Admin
+        path: ADMIN_ROUTE, //Путь, по которому компонент будет отрабатывать
+        Component: Admin //Сама страница
     },
     {
         path: BASKET_ROUTE,
@@ -16,7 +17,7 @@ export const authRoutes = [
     }
 ]
 
-export const publicRoutes = [
+export const publicRoutes = [ //Список маршрутов для всех пользователей
     {
         path: SHOP_ROUTE,
         Component: Shop
